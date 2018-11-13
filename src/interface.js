@@ -1,10 +1,14 @@
 $(document).ready(function () {
   var game = new Game;
 
-  $('#player').text(game.playerTurn())
+  checkPlayer();
 
   $('button').click(function(){
     game.switchPlayer();
-    $('#player').text(game.playerTurn())
+    checkPlayer();
   });
+
+  function checkPlayer() {
+    $('#player').text(game.playerTurn())
+  }
 });
