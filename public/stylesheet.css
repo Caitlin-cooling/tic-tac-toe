@@ -2,8 +2,11 @@ table {
   border: 1px solid black;
 }
 
-th, td {
+button {
   height: 10em;
   width: 10em;
+  background-color: white;
   border: 1px solid black;
+  padding: 15px 32px;
+  display: inline-block;
 }
