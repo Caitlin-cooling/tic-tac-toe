@@ -6,10 +6,15 @@ $(document).ready(function () {
 
   $('button').click(function(e){
     cordinates = e.target.id;
-    game.switchPlayer();
     checkPlayer();
+    addMove();
     setPlayerMove();
+    game.switchPlayer();
   });
+
+  function addMove() {
+    $(`#${cordinates}`).text(game.playerTurn())
+  }
 
   function checkPlayer() {
     $('#player').text(game.playerTurn())
