@@ -9,4 +9,9 @@ button {
   border: 1px solid black;
   padding: 15px 32px;
   display: inline-block;
+  font-size: 100%;
+}
+
+body {
+  font-family: sans-serif;
 }

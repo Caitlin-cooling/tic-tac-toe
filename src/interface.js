@@ -6,10 +6,10 @@ $(document).ready(function () {
 
   $('button').click(function(e){
     cordinates = e.target.id;
-    checkPlayer();
     addMove();
     setPlayerMove();
     game.switchPlayer();
+    checkPlayer();
   });
 
   function addMove() {
