@@ -1,5 +1,6 @@
 Game = function() {
   this.player = "X";
+  this.moves = [];
 };
 
 Game.prototype.playerTurn = function () {
@@ -13,3 +14,11 @@ Game.prototype.switchPlayer = function () {
     this.player = "X"
   }
 };
+
+Game.prototype.setMove = function(cordinates) {
+  this.moves.push(cordinates);
+}
+
+Game.prototype.getMoves = function(cordinates) {
+  return this.moves;
+}

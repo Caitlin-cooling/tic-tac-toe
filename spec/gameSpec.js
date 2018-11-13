@@ -16,4 +16,11 @@ describe("game", function(){
     });
   });
 
+  describe("getMoves", function(){
+    it("gets the moves of a player", function(){
+      game.setMove("3x3")
+      game.setMove("1x3")
+      expect(game.getMoves()).toEqual(["3x3", "1x3"])
+    });
+  });
 });
