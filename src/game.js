@@ -2,7 +2,7 @@ Game = function() {
   this.player = "X";
 };
 
-Game.prototype.playerMove = function () {
+Game.prototype.playerTurn = function () {
   return this.player;
 };
 
