@@ -10,6 +10,8 @@ $(document).ready(function () {
     setPlayerMove();
     checkPlayer();
     checkForWinner();
+    console.log("xmoves", game.getMovesX())
+    console.log("omoves", game.getMovesO())
   });
 
   function addMove() {
