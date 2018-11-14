@@ -1,19 +1,19 @@
 $(document).ready(function () {
   var game = new Game;
-  var cordinates= "";
+  var move= "";
 
   checkPlayer();
 
   $('button').click(function(e){
-    cordinates = e.target.id;
+    move = e.target.id;
     addMove();
     setPlayerMove();
-    game.switchPlayer();
     checkPlayer();
+    checkForWinner();
   });
 
   function addMove() {
-    $(`#${cordinates}`).text(game.playerTurn())
+    $(`#${move}`).text(game.playerTurn())
   }
 
   function checkPlayer() {
@@ -21,6 +21,12 @@ $(document).ready(function () {
   }
 
   function setPlayerMove(){
-    game.setMove(cordinates)
+    game.setMove(move)
+  }
+
+  function checkForWinner() {
+    if(game.checkWinner() !== undefined) {
+      $('#winner').text(`Player ${game.checkWinner()} won`)
+    }
   }
 });
